@@ -1,0 +1,125 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+    --cinza: rgb(180, 180, 180);
+    --branco: #fff;
+
+
+}
+
+* {
+    margin: 0; /* reset margin */
+    padding: 0; /* reset padding */
+    box-sizing: border-box;  /* Limita ao tamanho da caixa */
+}
+
+ /* Elementos base */
+
+body {
+    background: var(--preto);
+    font-family: sans-serif;
+    color: var(--branco);
+}
+
+.logo {
+    color: var(--vermelho);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--cinza);
+    margin-right: 10px;
+}
+
+.menu a:hover {
+    color: var(--branco);
+}
+
+.container-menu {
+    display: flex;
+    flex-direction: row;  /* coloca um elemento ao lado do outro */
+    align-items: center;
+    justify-content: space-between; /* distancia maxima entre os elementos */
+    margin-left: 30px;
+}
+
+ /* Filme Principal */
+
+ .filme-principal {
+     font-size: 16px;
+     background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(../img/onzehomens.jpg);
+     height: 500px;
+     background-size: cover;  /* Para a imagem pegar em toda a caixa */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start; /* Elementos comecao da esquerda */
+
+ }
+
+ .filme-principal .descricao {
+     margin-top: 10px;
+     margin-bottom: 40px;
+ }
+
+ .titulo {
+     margin-top: 10%;
+     font-size: 40px;
+     margin-bottom: 20px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ .botao {
+     background-color: rgba(0,0,0,.50);
+     border: none;
+     color: var(--branco);
+     padding: 15px 30px;
+     margin-right: 15px;
+     font-size: 12px;
+     cursor: pointer;
+     transition: 300ms ease all;
+ }
+
+ .botao:hover {
+     background-color: var(--branco);
+     color: var(--preto);
+
+ }
+
+ .botao i {
+     margin-right: 7px;
+ }
+
+ .container {
+     margin-left: 30px;
+ }
+
+ .filme-principal .container {
+    width: 60%;
+ }
+
+ .box-filme {
+     height: 100%;
+     width: 100%;
+     display: block;
+ }
+
+ .carrosel-filmes {
+     margin-top: 10px;
+ }
+
+ @media (max-width: 700px) {
+     .container-menu {
+         display: flex;
+         flex-direction: column;
+     }
+     .botao {
+         margin-top: 5px;
+         width: 250px;
+         height: 60px;
+     }
+
+ }
